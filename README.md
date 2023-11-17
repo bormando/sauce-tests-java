@@ -1,7 +1,7 @@
 # SauceLabs Tests Java
 
 ## About
-This repo is an example of a test project for [SauceLabs](https://www.saucedemo.com/) wep app.
+This repo is an example of a test project for [SauceLabs](https://www.saucedemo.com/) web app.
 
 The tech stack is:
 
