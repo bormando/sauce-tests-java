@@ -10,9 +10,9 @@ jobs:
   lint-and-test:
     runs-on: ubuntu-latest
     env:
-      BASE_URL: ${{ vars.ENV_USERNAME }}
-      USERNAME: ${{ secrets.ENV_PASSWORD }}
-      PASSWORD: ${{ secrets.BASE_URL }}
+      BASE_URL: ${{ vars.BASE_URL }}
+      USERNAME: ${{ secrets.USERNAME }}
+      PASSWORD: ${{ secrets.PASSWORD }}
     steps:
       - uses: actions/checkout@v3
       - name: Set up JDK 17
