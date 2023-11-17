@@ -1,0 +1,27 @@
+name: Quality Control
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    env:
+      BASE_URL: ${{ vars.ENV_USERNAME }}
+      USERNAME: ${{ secrets.ENV_PASSWORD }}
+      PASSWORD: ${{ secrets.BASE_URL }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: maven
+      - name: Check formatting
+        run: mvn com.spotify.fmt:fmt-maven-plugin:check -Dmaven.plugin.validation=VERBOSE
+      - name: Run tests
+        run: mvn clean test -e
