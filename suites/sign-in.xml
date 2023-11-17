@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Sign In" verbose="1" parallel="tests" thread-count="3">
+    <test name="Sign in with existing credentials" >
+        <classes>
+            <class name="SignInTests">
+                <methods>
+                    <include name="signInWithExistingCredentials" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Sign in with not existing credentials" >
+        <classes>
+            <class name="SignInTests">
+                <methods>
+                    <include name="signInWithNotExistingCredentials" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

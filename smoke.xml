@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Smoke" verbose="1" >
+    <suite-files>
+        <suite-file path="suites/sign-in.xml" />
+        <suite-file path="suites/products.xml" />
+    </suite-files>
+</suite>
