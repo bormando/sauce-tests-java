@@ -2,9 +2,15 @@ name: Quality Control
 
 on:
   push:
-    branches: ["main"]
+    branches: ['main']
+    paths-ignore:
+      - '.env.example'
+      - 'README.md'
   pull_request:
-    branches: ["main"]
+    branches: ['main']
+    paths-ignore:
+      - '.env.example'
+      - 'README.md'
 
 jobs:
   lint-and-test:
