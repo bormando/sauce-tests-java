@@ -10,4 +10,13 @@
             </class>
         </classes>
     </test>
+    <test name="Open item" >
+        <classes>
+            <class name="ProductsTests">
+                <methods>
+                    <include name="openItem" />
+                </methods>
+            </class>
+        </classes>
+    </test>
 </suite>
