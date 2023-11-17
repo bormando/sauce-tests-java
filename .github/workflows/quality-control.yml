@@ -24,4 +24,4 @@ jobs:
       - name: Check formatting
         run: mvn com.spotify.fmt:fmt-maven-plugin:check -Dmaven.plugin.validation=VERBOSE
       - name: Run tests
-        run: mvn clean test -e
+        run: mvn test -e
