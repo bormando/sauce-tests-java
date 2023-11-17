@@ -18,7 +18,6 @@ public class TestSuite {
     playwright.selectors().setTestIdAttribute("data-test");
 
     BrowserType.LaunchOptions launchOptions = new BrowserType.LaunchOptions();
-    launchOptions.setHeadless(false);
     launchOptions.setChannel("chrome");
 
     this.browser = playwright.chromium().launch(launchOptions);
